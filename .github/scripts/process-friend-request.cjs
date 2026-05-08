@@ -127,7 +127,9 @@ function parseIssueBody(body) {
 }
 
 function extractString(block, key) {
-	const match = block.match(new RegExp(`${key}:\s*["']([\s\S]*?)["']`));
+	// 匹配 key: "value" 或 key:\n\t\t"value"（支持换行后的字符串）
+	const regex = new RegExp(`${key}:\\s*(?:\\n\\s*)?["']([^"']*?)["']`);
+	const match = block.match(regex);
 	return match ? match[1] : '';
 }
 
@@ -161,7 +163,7 @@ function parseFriendsConfig(content) {
 		desc: extractString(block, 'desc'),
 		siteurl: extractString(block, 'siteurl'),
 		tags: extractTags(block),
-		weight: extractNumber(block, 'weight', 10),
+		weight: extractNumber(block, 'weight', 5),
 		enabled: extractBoolean(block, 'enabled', true),
 	}));
 }
@@ -178,7 +180,7 @@ function renderFriend(friend, indent) {
 		`${indent}\tdesc: "${escapeString(friend.desc)}",`,
 		`${indent}\tsiteurl: "${escapeString(friend.siteurl)}",`,
 		`${indent}\ttags: [${tags}],`,
-		`${indent}\tweight: ${Number.isFinite(friend.weight) ? friend.weight : 10},`,
+		`${indent}\tweight: ${Number.isFinite(friend.weight) ? friend.weight : 5},`,
 		`${indent}\tenabled: ${friend.enabled !== false},`,
 		`${indent}},`,
 	].join('\n');
@@ -200,7 +202,7 @@ function updateFriendsConfig(repoRoot, data) {
 		desc: data.site_desc || '',
 		siteurl: data.site_url,
 		tags: [data.site_tag || DEFAULT_TAG],
-		weight: 10,
+		weight: 5,
 		enabled: true,
 	};
 
