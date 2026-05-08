@@ -72,7 +72,10 @@ jobs:
             }
 
             // 解析为JSON数组（TS对象 → JSON）
-            const raw = match[1]
+            let raw = match[1]
+              // 先删除行内注释和块注释
+              .replace(/\/\/.*$/gm, '')
+              .replace(/\/\*[\s\S]*?\*\//g, '')
               .replace(/\btitle\s*:/g, '"title":')
               .replace(/\bimgurl\s*:/g, '"imgurl":')
               .replace(/\bdesc\s*:/g, '"desc":')
