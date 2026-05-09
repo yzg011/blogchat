@@ -90,7 +90,8 @@ export const live2dModelConfig: Live2DModelConfig = {
 	model: {
 		// Live2D模型文件路径（支持 Cubism 2 .model.json 和 Cubism 3+ .model3.json）
 		//path: "/pio/models/live2d/skd/skd.model3.json",
-		path: "/pio/models/live2d/model_rb/兔兔-阿米娅.model3.json",
+		path: "/pio/models/live2d/小爱弥斯_vts/小爱弥斯.model3.json",
+		//path: "/pio/models/live2d/model_rb/兔兔-阿米娅.model3.json",
 		//path: "/pio/models/live2d/LSS/LSS.model3.json",
 		// path: "/pio/models/live2d/snow_miku/model.json",
 		// path: "/pio/models/live2d/illyasviel/illyasviel.model.json",
@@ -109,9 +110,9 @@ export const live2dModelConfig: Live2DModelConfig = {
 	// 尺寸配置
 	size: {
 		// 容器宽度
-		width: 135,
+		width: 255,
 		// 容器高度
-		height: 165,
+		height: 285,
 	},
 
 	// 交互配置
@@ -120,11 +121,20 @@ export const live2dModelConfig: Live2DModelConfig = {
 		enabled: true,
 		// 点击时随机显示的文字消息，motions 和 expressions 将从模型 JSON 文件中自动读取
 		clickMessages: [
-			"你好呀！我是哈基墩~",
-			"笨蛋站长爸爸不在哦，有什么想对我说的吗？",
-			"今天天气真不错呢！",
-			"要不要一起玩游戏？",
-			"记得按时休息哦！",
+			"你好呀！爱弥斯给你讲个故事吧~",
+			"哼，不要随便摸爱弥斯的头啦！",
+			"你想听哪个故事？爱弥斯的故事书可多了！",
+			"爱弥斯才不是小孩子！……才、才不是呢！",
+			"嘿嘿，被你发现了~爱弥斯在这里偷偷看风景呢",
+			"一起冒险吧！爱弥斯会保护你的！……大概？",
+			"呜呜，爱弥斯的糖果不见了……你有看到吗？",
+			"天空好漂亮，像故事里公主的裙摆一样~",
+			"不要走嘛，再陪爱弥斯玩一会儿~",
+			"爱弥斯今天也很乖哦，有没有奖励？",
+			"雪绒豹豹说它也想跟你打招呼~喵！",
+			"别碰雪绒豹豹！它是爱弥斯一个人的！……才没有小气！",
+			"雪绒豹豹今天又在打瞌睡了，跟站长爸爸一样~",
+			"爱弥斯和雪绒豹豹要去冒险啦！要不要一起？",
 		],
 		// 随机显示的文字消息显示时间（毫秒）
 		messageDisplayTime: 3000,

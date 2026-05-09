@@ -1,4 +1,8 @@
 declare global {
+	interface Document {
+		startViewTransition?(callback: () => void): void;
+	}
+
 	interface HTMLElementTagNameMap {
 		"table-of-contents": HTMLElement & {
 			init?: () => void;

@@ -102,16 +102,48 @@ const size = config.size || { width: 280, height: 250 };
 
       live2dApp.stage.addChild(live2dModel);
 
-      // Click interaction — trigger random motion
+      // Click interaction — trigger random motion + expression + message
+      const clickMotionGroups = ["Expression", "TapShort"];
       live2dModel.on("hit", (hitAreas) => {
         console.log("[Live2D] Hit areas:", hitAreas);
-        showMessage();
+        playRandomMotion();
       });
 
-      // Tap on canvas fallback for models without hit areas
       canvas.addEventListener("click", () => {
-        showMessage();
+        playRandomMotion();
       });
+
+      // Idle animation: play a random motion every 15-30s when idle
+      let idleTimer = null;
+      function scheduleIdle() {
+        clearTimeout(idleTimer);
+        const delay = 15000 + Math.random() * 15000;
+        idleTimer = setTimeout(() => {
+          if (live2dModel) {
+            try {
+              live2dModel.motion("Idle", 0, 1); // IDLE priority
+              live2dModel.expression(); // random expression
+            } catch (e) { /* ignore */ }
+          }
+          scheduleIdle();
+        }, delay);
+      }
+      scheduleIdle();
+
+      function playRandomMotion() {
+        if (!live2dModel) return;
+        clearTimeout(idleTimer);
+        try {
+          const group = clickMotionGroups[Math.floor(Math.random() * clickMotionGroups.length)];
+          live2dModel.motion(group, undefined, 2); // NORMAL priority, random index
+          // Also trigger a random expression
+          live2dModel.expression();
+        } catch (e) {
+          console.warn("[Live2D] Failed to play motion:", e);
+        }
+        showMessage();
+        scheduleIdle();
+      }
 
       setupDrag();
       console.log("[Live2D] Model loaded successfully:", modelPathUrl);

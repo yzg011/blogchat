@@ -137,7 +137,7 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
 
 	// 使用 View Transitions API 实现平滑的交叉淡化
 	if (needsThemeChange && "startViewTransition" in document) {
-		(document as any).startViewTransition(doApply);
+		document.startViewTransition?.(doApply);
 	} else {
 		doApply();
 	}
@@ -207,7 +207,7 @@ export function setupSystemThemeListener() {
 		};
 
 		if ("startViewTransition" in document) {
-			(document as any).startViewTransition(applySystemTheme);
+			document.startViewTransition?.(applySystemTheme);
 		} else {
 			applySystemTheme();
 		}
