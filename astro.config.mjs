@@ -148,7 +148,7 @@ export default defineConfig({
 	],
 
 	markdown: {
-		unifiedPlugins: [
+		remarkPlugins: [
 			remarkMath,
 			remarkReadingTime,
 			remarkImageGrid,
@@ -158,7 +158,8 @@ export default defineConfig({
 			parseDirectiveNode,
 			remarkMermaid,
 			[remarkPlantuml, plantumlConfig],
-
+		],
+		rehypePlugins: [
 			[rehypeKatex, { katex }],
 			[rehypeCallouts, { theme: siteConfig.rehypeCallouts.theme }],
 			rehypeSlug,

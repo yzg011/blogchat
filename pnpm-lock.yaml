@@ -186,6 +186,9 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
     devDependencies:
+      '@astrojs/markdown-satteri':
+        specifier: ^0.3.4
+        version: 0.3.4
       '@astrojs/ts-plugin':
         specifier: ^1.10.10
         version: 1.10.10
@@ -5915,7 +5918,7 @@ snapshots:
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       js-yaml: 4.1.1
-      picomatch: 4.0.4
+      picomatch: 4.0.5
       retext-smartypants: 6.2.0
       shiki: 4.0.2
       smol-toml: 1.6.1
