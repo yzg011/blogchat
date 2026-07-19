@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "深漂小鱼",
 
 	// 站点 URL
-	site_url: "https://tblog.mmzhiku.xyz",
+	site_url: "https://blog1.z2m.store",
 
 	// 站点描述
 	description: "mmzming的博客，记录个人学习、工作、AI相关的内容",
