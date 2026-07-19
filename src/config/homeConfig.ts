@@ -15,16 +15,16 @@ export const homeConfig: HomeConfig = {
 	avatarOffWork: "assets/images/avatar-work-off.webp",
 
 	// 名字
-	name: "MmzMing",
+	name: "深漂小鱼",
 
 	// 首页展示名字（留空则使用 name）
-	displayName: "MmzMing",
+	displayName: "深漂小鱼",
 
 	// 名字右侧徽章文字（如 QQ 号）
-	nameBadge: "B站：Mmz明崽",
+	nameBadge: "B站：深漂小鱼",
 
 	// 职业/身份标签
-	occupation: "[(伪)全栈工程师[全干工程师] / 技术博主]",
+	occupation: "打工人",
 
 	// 个人签名（支持多条，会循环打字+删除效果）
 	bio: ["且视他人之疑目如盏盏鬼火，大胆地去走你的夜路"],
@@ -115,7 +115,7 @@ export const homeConfig: HomeConfig = {
 
 	// 展示层：垂直线 → 长柱 → 字体显隐 → 柱子扩全屏 → 衔接百叶窗
 	displayLayer: {
-		enabled: true,
+		enabled: false,
 		kicker: "作品展示",
 		title: "CRYSTALLIZE GALLERY",
 		description:
@@ -128,7 +128,7 @@ export const homeConfig: HomeConfig = {
 	portfolioShutter: {
 		enabled: true,
 		kicker: "The End",
-		title: "愿你每一天 都闪闪发光",
+		title: "做最好的自己",
 		description: "岁岁常欢愉，万事皆胜意",
 		scrollDistance: 3000,
 		finalImage: {

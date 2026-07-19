@@ -37,7 +37,7 @@ export const siteConfig: SiteConfig = {
 		// 是否对访问者隐藏主题色选择器
 		fixed: false,
 		// 默认模式："light" 亮色，"dark" 暗色
-		defaultMode: "dark",
+		defaultMode: "light",
 	},
 
 	// 页面整体宽度（单位：rem）
@@ -156,15 +156,15 @@ export const siteConfig: SiteConfig = {
 		// 友链页面开关
 		friends: true,
 		// 赞助页面开关
-		sponsor: true,
+		sponsor: false,
 		// 留言板页面开关，需要配置评论系统
 		guestbook: true,
 		// 相册页面开关
-		gallery: true,
+		gallery: false,
 		// 收藏API页面开关
-		collections: true,
+		collections: false,
 		// 日历页面开关
-		calendar: true,
+		calendar: false,
 	},
 
 	// 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
@@ -177,7 +177,7 @@ export const siteConfig: SiteConfig = {
 		// 移动端默认布局模式，不设置则跟随 defaultMode
 		mobileDefaultMode: "list",
 		// 是否在文章列表中显示标签
-		showTags: true,
+		showTags: false,
 		// 文章简介显示行数，设为 0 则不截断
 		descriptionLines: 2,
 		// 是否允许用户切换布局
@@ -209,7 +209,7 @@ export const siteConfig: SiteConfig = {
 			shareId: "uAfsjwbIKgVPjxtc",
 			scriptUrl: "https://stats.mmzhiku.xyz/script.js",
 			// 是否追踪出站链接
-			trackOutboundLinks: true,
+			trackOutboundLinks: false,
 			// 是否收集浏览器性能指标
 			collectWebVitals: false,
 			// 会话回放配置
@@ -239,14 +239,14 @@ export const siteConfig: SiteConfig = {
 			//  Hash路由模式, 项目使用History API路由, 所以不必开启默认false
 			hashMode: false,
 			// 是否开启网站录屏功能
-			screenRecord: true,
+			screenRecord: false,
 		},
 	},
 
 	// 热力图配置
 	heatmap: {
 		github: {
-			enabled: true,
+			enabled: false,
 			username: "MmzMing", // 填写 GitHub 用户名后启用
 		},
 	},

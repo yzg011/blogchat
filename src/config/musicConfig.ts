@@ -62,8 +62,8 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	// 可视化器配置
 	visualizer: {
 		background: {
-			dark: "#000000",
-			light: "#000000",
+			dark: "#8be8ee",
+			light: "#8be8ee",
 		},
 		camera: {
 			position: {
@@ -97,15 +97,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		// 想要红色：用 #ff4444
 		// 想要透明度：别塞进 rippleColor，单独加一个 rippleOpacity 或 rippleAlpha
 		theme: {
-			base1: "#000000",
-			base2: "#000000",
+			base1: "#8be8ee",
+			base2: "#8be8ee",
 			coolCore: "#16b8c9",
 			coolEdge: "#69dce7",
 			warmCore: "#8be8ee",
 			warmEdge: "#d9ffff",
-			rippleColor: "#3bcbd9",
 			// 波纹冷暖锚点：安静/低频偏冷、明亮/高频偏暖，与地形冷暖同步联动
-			rippleCool: "#3bcbd9",
 			rippleWarm: "#d9ffff",
 			fogColor: "#050810",
 			glowIntensity: 0.86,

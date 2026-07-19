@@ -61,7 +61,6 @@ const buildNavBarConfig = (): NavBarConfig => {
 	// 4. 统一组装导航栏链接（顺序：主页 → 菲比啾比 → 工具导航 → 文章 → 联系我 → 我的）
 	const links: (NavBarLink | LinkPreset)[] = [
 		LinkPreset.Home,
-		LinkPreset.Feibichi,
 		...(siteConfig.pages.collections ? [LinkPreset.Collections] : []),
 		postsNav,
 		...(contactNav ? [contactNav] : []),
