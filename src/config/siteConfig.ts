@@ -7,10 +7,10 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "MmzMing的博客",
+	title: "深漂小鱼",
 
 	// 站点副标题
-	subtitle: "MmzMing",
+	subtitle: "深漂小鱼",
 
 	// 站点 URL
 	site_url: "https://tblog.mmzhiku.xyz",
@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点关键词
 	keywords: [
-		"MmzMing",
+		"深漂小鱼",
 		"JAVA",
 		"AI",
 		"Astro",
@@ -111,13 +111,13 @@ export const siteConfig: SiteConfig = {
 			alt: "logo",
 		},
 		// 导航栏标题
-		title: "MmzMing的博客",
+		title: "深漂小鱼",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
 		widthFull: false,
 	},
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2026-05-07",
+	siteStartDate: "2026-07-07",
 
 	// 站点时区（IANA 时区字符串），用于格式化bangumi、rss里的构建日期时间等等..
 	// 示例："Asia/Shanghai", "UTC", 如果为空，则按照构建服务器的时区进行时区转换
@@ -160,11 +160,11 @@ export const siteConfig: SiteConfig = {
 		// 留言板页面开关，需要配置评论系统
 		guestbook: true,
 		// 相册页面开关
-		gallery: false,
+		gallery: true,
 		// 收藏API页面开关
-		collections: false,
+		collections: true,
 		// 日历页面开关
-		calendar: false,
+		calendar: true,
 	},
 
 	// 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
@@ -177,7 +177,7 @@ export const siteConfig: SiteConfig = {
 		// 移动端默认布局模式，不设置则跟随 defaultMode
 		mobileDefaultMode: "list",
 		// 是否在文章列表中显示标签
-		showTags: false,
+		showTags: true,
 		// 文章简介显示行数，设为 0 则不截断
 		descriptionLines: 2,
 		// 是否允许用户切换布局
@@ -185,7 +185,7 @@ export const siteConfig: SiteConfig = {
 		// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
 		grid: {
 			// 是否开启瀑布流布局，同时有封面图和无封面图的混合文章推荐开启
-			masonry: false,
+			masonry: true,
 			// 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数
 			columnWidth: 320,
 		},
@@ -215,7 +215,7 @@ export const siteConfig: SiteConfig = {
 			// 会话回放配置
 			relpays: {
 				// 是否启用会话回放
-				enabled: false,
+				enabled: true,
 				// 录制会话采样率，范围 0-1，例如 0.15 表示记录 15% 的会话
 				sampleRate: 0.15,
 				// 隐私遮罩级别："moderate" 会遮罩所有输入框；"strict" 额外遮罩页面全部文本
